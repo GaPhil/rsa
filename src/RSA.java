@@ -2,6 +2,11 @@ import java.util.Random;
 
 public class RSA {
 
+    // method for generating random number
+    private static int randInt() {
+        return new Random().nextInt((10000 - 1) + 1) + 1;
+    }
+
     // method for checking if a number is positive
     private static boolean isPos(int n) {
         return (n > 0);
@@ -23,7 +28,7 @@ public class RSA {
     private static int genPrime() {
         int randNo = new Random().nextInt();
         while (!isPrime(randNo) || !isPos(randNo)) {
-            randNo = new Random().nextInt();
+            randNo = randInt();
         }
         return randNo;
     }
@@ -35,32 +40,57 @@ public class RSA {
         else return gcd(b, a % b);
     }
 
+    // method for generating the totient of the product
+    // m = (p-1)(q-1)
+    private static int m (int p, int q){
+        return (p-1) * (q-1);
+    }
+
     // method for finding e
-    // TODO
+    private static int genE () {
+        int e = genPrime();
+        while (e > m(p,q)) {
+            e = genPrime();
+        }
+        return e;
+    }
+
+    // Choose two distinct prime numbers p and q
+    private static int p = genPrime();
+    private static int q = genPrime();
+
+    // Compute n = pq
+    private static int n = p * q;
 
     public static void main (String args[]) {
 
         // Choose two distinct prime numbers p and q
-        int p = genPrime();
-        int q = genPrime();
         System.out.println("p = " + p + " q = " + q);
 
         // Compute n = pq
-        long n = p * q;
         System.out.println("n = " + p + " * " + q);
         System.out.println("n = " + n);
 
+        System.out.println();
+
         // Compute the totient of the product as φ(n) = m = (p − 1)(q − 1)
         long m = (p-1) * (q-1);
+        System.out.println("m = (p-1) * (q-1)");
         System.out.println("m = (" + p + "-1)" +  " * (" + q + "-1)");
         System.out.println("m = " + (p-1) + " * " + (q-1));
         System.out.println("m = " + m);
 
-        // Choose any number 1 < e < m that is coprime to m
-        // TODO
-        // int e;
+        System.out.println();
 
-        // compute e * d = mod m
+        // Choose any number 1 < e < m that is coprime to m
+        int e = genE();
+        System.out.println("e = " + e);
+
+        System.out.println();
+
+        // Compute d, the modular multiplicative inverse of e (mod φ(n))
         // TODO
+        int d = gcd(e, n);
+        System.out.println("d = " + d);
     }
 }
