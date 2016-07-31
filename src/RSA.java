@@ -62,6 +62,15 @@ public class RSA {
     // Compute n = pq
     private static int n = p * q;
 
+    // Compute the multiplicative inverse
+    private static int multiplicativeInverse (int e, int m) {
+        e = e % m;
+        for (int i = 1; 1 < m; i++)
+            if ((e * i) % m == 1)
+                return i;
+        return 0;
+    }
+
     public static void main (String args[]) {
 
         // Choose two distinct prime numbers p and q
@@ -74,7 +83,7 @@ public class RSA {
         System.out.println();
 
         // Compute the totient of the product as φ(n) = m = (p − 1)(q − 1)
-        long m = (p-1) * (q-1);
+        int m = (p-1) * (q-1);
         System.out.println("m = (p-1) * (q-1)");
         System.out.println("m = (" + p + "-1)" +  " * (" + q + "-1)");
         System.out.println("m = " + (p-1) + " * " + (q-1));
@@ -89,8 +98,16 @@ public class RSA {
         System.out.println();
 
         // Compute d, the modular multiplicative inverse of e (mod φ(n))
-        // TODO
-        int d = gcd(e, n);
+        int d = multiplicativeInverse(e,m);
         System.out.println("d = " + d);
     }
 }
+
+
+// public key is given by n and e
+// c(m) = m^e mod n
+
+// private key is given by d
+// m(c) = c^d mod n
+
+//
