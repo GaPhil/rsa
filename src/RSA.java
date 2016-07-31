@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class RSA {
 
@@ -100,14 +101,33 @@ public class RSA {
         // Compute d, the modular multiplicative inverse of e (mod φ(n))
         int d = multiplicativeInverse(e,m);
         System.out.println("d = " + d);
+
+        System.out.println();
+
+        // Public Key
+        System.out.println("The Public Key is n = " + n + " , e = " + e);
+
+        System.out.println();
+
+        // Private Key
+        System.out.println("The Private Key is d = " + d);
+
+        System.out.println();
+
+        // Encrypt
+        System.out.println("Enter the number that you wish to encrypt:");
+        Scanner scan = new Scanner(System.in);
+        int enc = scan.nextInt();
+        int c = (enc ^ e) % n;
+        System.out.println();
+        System.out.println("The encrypted number is: " + c);
+
+        // Decrypt
+        System.out.println("Enter the number that you wish to decrypt:");
+        int dec = scan.nextInt();
+        int x = (dec ^ d) % n;
+        System.out.println();
+        System.out.println("The decrypted number is: " + x);
     }
+
 }
-
-
-// public key is given by n and e
-// c(m) = m^e mod n
-
-// private key is given by d
-// m(c) = c^d mod n
-
-//
