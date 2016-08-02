@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16778846-e468-473d-baa1-498583717319" name="Default" comment="">
+    <list default="true" id="16778846-e468-473d-baa1-498583717319" name="Default" comment="works!">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/rsa/RSA.class" afterPath="$PROJECT_DIR$/out/production/rsa/RSA.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/RSA.java" afterPath="$PROJECT_DIR$/src/RSA.java" />
     </list>
     <ignored path="rsa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -620,7 +619,7 @@
       <workItem from="1467238289025" duration="12099000" />
       <workItem from="1467383021831" duration="749000" />
       <workItem from="1469959314032" duration="8419000" />
-      <workItem from="1470128396159" duration="4334000" />
+      <workItem from="1470128396159" duration="4348000" />
     </task>
     <task id="LOCAL-00001" summary="implementing 4 stages">
       <created>1467299088954</created>
@@ -643,11 +642,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469964286490</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="works!">
+      <created>1470165310205</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1470165310205</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25601000" />
+    <option name="totallyTimeSpent" value="25615000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -705,7 +711,8 @@
     <MESSAGE value="implementing 4 stages" />
     <MESSAGE value="multiplicative inverse" />
     <MESSAGE value="completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed" />
+    <MESSAGE value="works!" />
+    <option name="LAST_COMMIT_MESSAGE" value="works!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
