@@ -1,5 +1,7 @@
+import java.math.BigInteger;
 import java.util.Random;
 import java.util.Scanner;
+import static java.lang.Math.pow;
 
 public class RSA {
 
@@ -117,15 +119,30 @@ public class RSA {
         // Encrypt
         System.out.println("Enter the number that you wish to encrypt:");
         Scanner scan = new Scanner(System.in);
-        int enc = scan.nextInt();
-        int c = (enc ^ e) % n;
+        BigInteger enc = scan.nextBigInteger();
+
+        BigInteger n2 = BigInteger.valueOf(n);
+
+        BigInteger c;
+        c = enc.pow(e);
+        c = c.mod(n2);
+
         System.out.println();
         System.out.println("The encrypted number is: " + c);
 
+        System.out.println();
+
+
         // Decrypt
         System.out.println("Enter the number that you wish to decrypt:");
-        int dec = scan.nextInt();
-        int x = (dec ^ d) % n;
+        BigInteger dec = scan.nextBigInteger();
+
+        BigInteger n3 = BigInteger.valueOf(n);
+
+        BigInteger x;
+        x = dec.pow(d);
+        x = x.mod(n3);
+
         System.out.println();
         System.out.println("The decrypted number is: " + x);
     }
