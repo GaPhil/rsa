@@ -1,7 +1,6 @@
 import java.math.BigInteger;
 import java.util.Random;
 import java.util.Scanner;
-import static java.lang.Math.pow;
 
 public class RSA {
 
