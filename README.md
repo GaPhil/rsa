@@ -21,7 +21,7 @@ The keys for the RSA algorithm are generated the following way:
   - **_e_** is released as the public key exponent.
   - **_d_** is kept as the private key exponent.
 
-The public key consists of the modulus **_n_** and the public (or encryption) exponent **_e_**. The private key consists of the modulus **_n_** and the private (or decryption) exponent **_d_**, which must be kept secret. **_p, q_**, and **_φ(n)_** must also be kept secret because they can be used to calculate **_d_**.
+The public key consists of the modulus **_n_** and the public (or encryption) exponent **_e_**. The private key consists of the modulus **_n_** and the private (or decryption) exponent **_d_**, which must be kept secret. **_p_**, **_q_**, and **_φ(n)_** must also be kept secret because they can be used to calculate **_d_**.
 
 
 ###Encryption
