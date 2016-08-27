@@ -7,7 +7,7 @@ This programme is a short demonstraiton of the rsa encryption algorithm.
 The keys for the RSA algorithm are generated the following way:
 
 1. Choose two distinct prime numbers **_p_** and **_q_**.
-  - For security purposes, the integers p and q should be chosen at random, and should be similar in magnitude but 'differ in length by a few digits to make factoring harder. 
+  - For security purposes, the integers **_p_** and **_q_** should be chosen at random, and should be similar in magnitude but 'differ in length by a few digits to make factoring harder. 
 
 2. Compute **_n = pq_**.
   - **_n_** is used as the modulus for both the public and private keys.
