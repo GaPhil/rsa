@@ -1,6 +1,6 @@
 # RSA Encryption
 
-This programs is a short demonstration of the rsa encryption algorithm. 
+This program is a short demonstration of the rsa encryption algorithm. 
 
 
 ###Key generation
