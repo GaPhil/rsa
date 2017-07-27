@@ -3,7 +3,7 @@
 This program is a short demonstration of the rsa encryption algorithm. 
 
 
-###Key generation
+### Key generation
 The keys for the RSA algorithm are generated the following way:
 
 1. Choose two distinct prime numbers **_p_** and **_q_**.
@@ -24,14 +24,14 @@ The keys for the RSA algorithm are generated the following way:
 The public key consists of the modulus **_n_** and the public (or encryption) exponent **_e_**. The private key consists of the modulus **_n_** and the private (or decryption) exponent **_d_**, which must be kept secret. **_p_**, **_q_**, and **_φ(n)_** must also be kept secret because they can be used to calculate **_d_**.
 
 
-###Encryption
+### Encryption
 
 **_c ≡ m<sup>e</sup> (mod n)_**
 
-###Decryption
+### Decryption
 
 **_c<sup>d</sup> ≡ (m<sup>e</sup>)<sup>d</sup> ≡ m (mod n)_**
 
-###Sources 
+### Sources 
 
 [Wikipedia: RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
